@@ -1,21 +1,17 @@
 # Small Steps
-### Junior Astronaut Mission Trainer
+## Junior Astronaut Mission Trainer
 
-**Team Astro Kitty · NASA Space Apps Challenge 2026**
+Team Astro Kitty — NASA Space Apps Challenge 2026
 
-Small Steps is an educational game concept about keeping a lunar outpost running. Our aim is to help young learners explore the decisions behind a space mission: how to manage limited supplies, protect a crew, and understand why one choice can affect the whole habitat.
+Small Steps is an educational game concept about keeping a lunar outpost running. Our aim is to help young learners understand the decisions behind a space mission: managing limited supplies, protecting the crew, and seeing how one choice can affect the whole habitat.
 
-We want players to learn by making decisions, seeing their consequences, and trying again.
+We want players to learn by making decisions, seeing the results, and trying again. The gameplay and NASA integrations described below are part of our planned prototype.
 
-> **Project status:** This README describes the intended prototype. Features and NASA integrations listed below are planned; the working demo, implementation details, and verified setup instructions still need to be added.
+## Team introduction video
 
-## Project links
+Our initial video introduces Team Astro Kitty.
 
-| Resource | Link |
-| --- | --- |
-| Play the prototype | [ADD: public app or game URL] |
-| Watch the project video | [ADD: video URL] |
-| Space Apps project page | [ADD: team project-page URL] |
+[Watch our team introduction](https://youtu.be/IEak3w6sIaQ)
 
 ## Why we chose this idea
 
@@ -25,50 +21,30 @@ Small Steps turns those connected problems into short, understandable choices. A
 
 ## Planned gameplay
 
-The initial design focuses on one lunar-outpost scenario played across five short mission rounds.
+The initial design focuses on one lunar outpost scenario played across five short mission rounds.
 
-1. **Read the mission briefing.** Learn what the crew needs and what resources are available.
-2. **Check the habitat.** Review the condition of the outpost and its remaining supplies.
-3. **Make a decision.** Choose how to respond to a mission event or resource problem.
-4. **See the consequences.** Find out how that choice affects the crew and other systems.
-5. **Review the mission.** Finish with a short debrief explaining the decisions and their outcomes.
+Players begin with a mission briefing and check the habitat's resources. They then choose how to respond to a mission event or resource problem and see how their decision affects the crew and other systems. A short debrief at the end explains their choices and the mission outcome.
 
-Planned prototype features include:
+The planned prototype includes a simple dashboard for power, oxygen, water, food, and crew protection. Decision cards will present clear choices with short explanations. Space-weather scenarios will introduce radiation protection, while the mission debrief will connect decisions to the underlying science.
 
-- A simple dashboard for power, oxygen, water, food, and crew protection.
-- Decision cards with clear choices and short explanations.
-- Space-weather scenarios that introduce radiation protection.
-- A mission debrief that connects gameplay choices to the underlying science.
-- English and Bangla instructions to make the experience more accessible.
+We also plan to include English and Bangla instructions to make the experience more accessible.
 
-These are design goals, not a list of verified completed features.
+## NASA resources
 
-## NASA resources and planned use
+The following NASA resources are planned references for the prototype.
 
-Our project materials identify NASA space-weather and life-support resources as planned references.
+[NASA CCMC DONKI](https://ccmc.gsfc.nasa.gov/tools/DONKI/)
 
-| Resource | Intended use | Status |
-| --- | --- | --- |
-| [NASA CCMC DONKI](https://ccmc.gsfc.nasa.gov/tools/DONKI/) | Use historical solar energetic particle event records as background for selected space-weather scenarios. | Planned; no live connection or imported records are claimed here. |
-| [NASA Environmental Control and Life Support Systems](https://www.nasa.gov/reference/environmental-control-and-life-support-systems-eclss/) | Inform explanations of oxygen generation, water recovery, and the relationship between habitat systems. | Planned educational reference. |
+We plan to use historical solar energetic particle event records as background for selected space-weather scenarios.
 
-The game is intended to simplify these subjects for learning. Gameplay resource values and event outcomes should be identified as simulated, with any real records cited separately.
+[NASA Environmental Control and Life Support Systems](https://www.nasa.gov/reference/environmental-control-and-life-support-systems-eclss/)
 
-## Running the project
+We plan to use NASA's life-support resources to inform explanations of oxygen generation, water recovery, and the relationships between habitat systems.
 
-[ADD: the technologies actually used, required software versions, and the exact installation and launch steps tested with the uploaded code.]
+The game will simplify these subjects for learning. Gameplay values and outcomes will be presented as simulated, with any real records cited separately.
 
-For an online demo, use the prototype link above once it is available.
+## Team members
 
-## Team
+Rafiull Bari
 
-- **Rafiull Bari**
-- **Saad Uddin Ahmad Basit**
-
-## Credits and AI assistance
-
-[ADD: each team member's contributions, third-party assets and their sources, and the AI tools used for code, writing, images, or video. Explain how each tool was used.]
-
-## License
-
-[ADD: the license chosen for the team's original code and the matching LICENSE file. Identify any third-party assets covered by different terms.]
+Saad Uddin Ahmad Basit
