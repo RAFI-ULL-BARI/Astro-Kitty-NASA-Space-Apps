@@ -187,7 +187,8 @@ Full technical notes: **[docs/TECHNICAL.md](docs/TECHNICAL.md)**
 
 ## 👩‍🚀 Team Astro Kitty 🇧🇩
 
-**Rafiull Bari** and **Saad Uddin Ahmad Basit**, Bangladesh.<br>
+**Rafiull Bari (Team Leader)** and 
+**Saad Uddin Ahmad Basit**, Bangladesh.<br>
 Made with ❤ for the NASA Space Apps Challenge 2026.
 
 ---
