@@ -1,6 +1,6 @@
 <div align="center">
 
-# Astro Kitty
+# Astro Kitty 🐱
 ### Junior Astronaut Mission Trainer
 
 **Fly to Mars. Train like an astronaut. Keep a Mars base alive.**<br>
