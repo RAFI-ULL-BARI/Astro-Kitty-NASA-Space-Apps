@@ -4,7 +4,7 @@
 ### Junior Astronaut Mission Trainer
 
 **Fly to Mars. Train like an astronaut. Keep a Mars base alive.**<br>
-A playful web game for kids aged 8–12, powered by real NASA space-weather data.
+A playful web game for kids aged 7–12, powered by real NASA space-weather data.
 
 <a href="https://astro-kitty-mission-trainer.vercel.app"><img src="https://img.shields.io/badge/▶%20PLAY%20NOW-astro--kitty--mission--trainer.vercel.app-f7c873?style=for-the-badge&labelColor=14233c" alt="Play Astro Kitty now"></a>
 
