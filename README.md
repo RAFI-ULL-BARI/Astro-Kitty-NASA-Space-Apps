@@ -29,9 +29,9 @@ Kids pick a kitty astronaut and, with **Dhrubo** (ধ্রুব, “pole star�
 
 <table>
 <tr>
-<td align="center" width="33%"><b>1 · Fly to Mars 🚀</b><br><sub>Plan the trip, then watch it play out</sub></td>
+<td align="center" width="33%"><b>1 · Fly to Mars </b><br><sub>Plan the trip, then watch it play out</sub></td>
 <td align="center" width="33%"><b>2 · Astronaut training 🐾</b><br><sub>Hands-on skills: power, shelter, rover</sub></td>
-<td align="center" width="33%"><b>3 · Mars base 🏠</b><br><sub>Five Mars days, real choices, real data</sub></td>
+<td align="center" width="33%"><b>3 · Mars base </b><br><sub>Five Mars days, real choices, real data</sub></td>
 </tr>
 </table>
 
