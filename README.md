@@ -21,7 +21,7 @@ A playful web game for kids aged 7–12, powered by real NASA space-weather data
 
 ---
 
-## What is Astro Kitty?
+## ▫️ What is Astro Kitty?
 
 Astro Kitty is our answer to the NASA Space Apps Challenge **“Build a Junior Astronaut Mission Trainer.”**
 
