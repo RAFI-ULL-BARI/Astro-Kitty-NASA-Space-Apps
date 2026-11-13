@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#15233b">
+<meta name="description" content="Fly to Mars, train as an astronaut and run a Mars base with Astro Kitty and Dhrubo.">
+<title>Astro Kitty · A New Home on Mars</title><link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="stylesheet" href="./styles.css"><script type="module" src="./app.js"></script>
+</head>
+<body>
+<svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+<symbol id="i-sound" viewBox="0 0 24 24"><path d="m11 4-6 5H2v6h3l6 5Zm4 4c3 2 3 6 0 8m3-11c5 4 5 10 0 14"/></symbol>
+<symbol id="i-mute" viewBox="0 0 24 24"><path d="m11 4-6 5H2v6h3l6 5Zm4 5 6 6m0-6-6 6"/></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+<symbol id="i-replay" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 8M4 3v7h7"/></symbol>
+<symbol id="i-cat" viewBox="0 0 48 48"><path d="M11 23 9 9l12 8h6l12-8-2 14a16 16 0 1 1-26 0Z"/><path d="M17 27h1m12 0h1m-9 6 2 2 2-2m-12 0-7-2m27 2 7-2"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+<symbol id="i-battery" viewBox="0 0 24 24"><rect x="2" y="6" width="17" height="12" rx="3"/><path d="M22 10v4M7 12h7m-3-3v6"/></symbol>
+<symbol id="i-air" viewBox="0 0 24 24"><path d="M3 7h12a3 3 0 1 0-3-3M3 12h16a3 3 0 1 1-3 3M3 17h5a2 2 0 1 1-2 2"/></symbol>
+<symbol id="i-radio" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="13" rx="3"/><path d="m6 8 12-6M6 12h11M7 16h3"/><circle cx="16" cy="16" r="2"/></symbol>
+<symbol id="i-rover" viewBox="0 0 24 24"><path d="M3 15V9h13l4 6M7 9V5h7m-3 0V2M2 15h20"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21 3.5 12.5A5.5 5.5 0 0 1 12 5a5.5 5.5 0 0 1 8.5 7.5Z"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6Z"/><path d="m8 12 3 3 5-6"/></symbol>
+<symbol id="i-paw" viewBox="0 0 24 24"><ellipse cx="12" cy="16" rx="6" ry="4"/><ellipse cx="5" cy="8" rx="2" ry="3"/><ellipse cx="11" cy="5" rx="2" ry="3"/><ellipse cx="17" cy="7" rx="2" ry="3"/><ellipse cx="21" cy="12" rx="2" ry="3"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+</defs></svg>
+<main class="game" id="game">
+<canvas id="scene" tabindex="0" aria-label="Astro Kitty, a narrated Mars adventure. Begin the mission to play." role="img"></canvas><div class="vignette" aria-hidden="true"></div>
+<header class="game-header"><a class="brand" href="./" aria-label="Astro Kitty home"><svg><use href="#i-cat"/></svg><span>astro kitty<span class="brand-star">✦</span></span></a><span id="chapter" class="chapter hidden"></span><div class="header-actions"><a id="homeButton" class="round-button home-button" href="./" aria-label="Home" title="Home">🏠</a><button id="voiceButton" class="round-button" aria-label="Turn narration off" aria-pressed="true"><svg><use href="#i-sound"/></svg></button><button id="pauseButton" class="round-button hidden" aria-label="Pause adventure"><svg><use href="#i-pause"/></svg></button></div></header>
+<section class="title-screen" id="titleScreen" aria-label="Start your adventure"><h1>A new home<br>on <em>Mars.</em></h1>
+<div class="avatar-pick" role="radiogroup" aria-labelledby="avatarLabel"><span id="avatarLabel" class="pick-label" data-story-copy="pickKitty"></span><div id="avatarChoices" class="avatar-choices"></div></div>
+<ol id="journeySteps" class="journey-steps" aria-label="Your adventure"></ol>
+<div class="start-actions"><button class="primary" id="beginButton" data-story-copy="beginAdventure"></button><button id="skipMars" class="text-button hidden"></button><button id="newButton" class="text-button hidden" data-story-copy="newAdventure"></button></div>
+<details class="more-menu"><summary data-story-copy="moreMenu"></summary><nav class="hub-links"><a href="./teacher.html" data-story-copy="teacher"></a></nav><div id="creditSlot"></div></details></section>
+<section id="launchSimulator" class="launch-sim hidden"></section>
+<section id="routeChoice" class="route-choice hidden" aria-labelledby="routeTitle"></section>
+<section id="puzzle" class="story-workbench hidden"></section><details id="trainingScience" class="story-science hidden"></details><div id="happyBubble" class="happy-bubble hidden" role="status"></div><div id="sceneBanner" class="scene-banner hidden" aria-live="polite"></div>
+<div class="story-hud">
+<div id="actionArea" class="action-area hidden"><span id="objective"></span><div class="action-row"><div id="actionProgress" class="action-progress hidden" role="progressbar" aria-label="Task progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div><button id="interactButton" class="primary small hidden"></button><button id="skipButton" class="text-button hidden">Continue scene <span aria-hidden="true">→</span></button></div></div>
+<div id="touchControls" class="touch-controls hidden" role="group" aria-labelledby="movementCaption">
+<div class="movement-caption" id="movementCaption"><strong id="movementVerb"></strong><span id="movementKeys" data-story-copy="storyUseArrowKeys"></span></div><button data-dir="up" aria-label="Move up">↑</button><button data-dir="left" aria-label="Move left">←</button><button data-dir="down" aria-label="Move down">↓</button><button data-dir="right" aria-label="Move right">→</button></div>
+<section id="subtitle" class="subtitle hidden" aria-live="polite" aria-atomic="true"><div class="pip-portrait" aria-hidden="true"><span><i></i><i></i></span></div><div><span class="speaker" id="speaker">DHRUBO · YOUR ROBOT BUDDY</span><p id="spokenLine"></p></div><button id="repeatButton" class="repeat-button" aria-label="Repeat narration"><svg><use href="#i-replay"/></svg></button></section>
+</div>
+<div id="monitorControl" class="monitor-control hidden"><label for="monitorScale" data-story-copy="monitorScale"></label><input id="monitorScale" type="range" min="0" max="2" step="1" value="1"></div>
+<p id="airlockReadout" class="sr-only hidden"></p>
+<section id="ending" class="ending hidden" aria-label="Mission complete"></section><span class="episode-label hidden" id="episodeLabel"></span><div id="srStatus" class="sr-only" aria-live="polite"></div>
+</main>
+<dialog id="menuDialog"><div class="dialog-top"><span class="eyebrow" id="dialogLabel">PAUSED</span><button class="round-button" id="closeDialog" aria-label="Close menu">×</button></div><div id="dialogBody"></div></dialog>
+<noscript><p class="noscript">Please enable JavaScript to join Astro Kitty’s adventure.</p></noscript>
+</body></html>

@@ -1,0 +1,65 @@
+[
+  {
+    "flrID": "2024-05-08T21:08:00-FLR-001",
+    "startTime": "2024-05-08T21:08:00Z",
+    "peakTime": "2024-05-08T21:40:00Z",
+    "classType": "X1.0",
+    "source": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/30601/-1"
+  },
+  {
+    "flrID": "2024-05-09T08:45:00-FLR-001",
+    "startTime": "2024-05-09T08:45:00Z",
+    "peakTime": "2024-05-09T09:13:00Z",
+    "classType": "X2.2",
+    "source": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/30605/-1"
+  },
+  {
+    "flrID": "2024-05-10T06:27:00-FLR-001",
+    "startTime": "2024-05-10T06:27:00Z",
+    "peakTime": "2024-05-10T06:54:00Z",
+    "classType": "X3.9",
+    "source": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/30666/-1"
+  },
+  {
+    "flrID": "2024-01-06T05:28:00-FLR-001",
+    "startTime": "2024-01-06T05:28:00Z",
+    "peakTime": "2024-01-06T05:37:00Z",
+    "classType": "C3.3",
+    "source": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/28511/-1"
+  },
+  {
+    "flrID": "2024-01-06T05:41:00-FLR-001",
+    "startTime": "2024-01-06T05:41:00Z",
+    "peakTime": "2024-01-06T05:47:00Z",
+    "classType": "C3.8",
+    "source": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/28512/-1"
+  },
+  {
+    "flrID": "2024-01-06T05:53:00-FLR-001",
+    "startTime": "2024-01-06T05:53:00Z",
+    "peakTime": "2024-01-06T05:59:00Z",
+    "classType": "C4.1",
+    "source": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/28513/-1"
+  },
+  {
+    "flrID": "2024-01-06T06:06:00-FLR-001",
+    "startTime": "2024-01-06T06:06:00Z",
+    "peakTime": "2024-01-06T06:15:00Z",
+    "classType": "C4.0",
+    "source": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/28514/-1"
+  },
+  {
+    "flrID": "2023-01-11T00:39:00-FLR-001",
+    "startTime": "2023-01-11T00:39:00Z",
+    "peakTime": "2023-01-11T00:59:00Z",
+    "classType": "M2.4",
+    "source": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/23243/-1"
+  },
+  {
+    "flrID": "2026-07-04T01:52:00-FLR-001",
+    "startTime": "2026-07-04T01:52:00Z",
+    "peakTime": "2026-07-04T02:01:00Z",
+    "classType": "M1.2",
+    "source": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/47310/-1"
+  }
+]

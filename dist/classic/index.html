@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10121e">
+  <meta name="description" content="Suit up for four hands-on Mars missions. Clean solar panels, pilot a rover, manage your habitat and reach shelter with Astro Kitty.">
+  <title>Astro Kitty · Junior Astronaut Trainer</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./field-training.css">
+  <script src="./app.js" type="module"></script>
+</head>
+<body>
+<svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.2.9-4.5 4.4 1.1 6.1-5.5-2.9-5.5 2.9 1.1-6.1L3.1 9.5l6.2-.9Z"/></symbol>
+  <symbol id="i-orbit" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><ellipse cx="12" cy="12" rx="11" ry="5" transform="rotate(-35 12 12)"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+  <symbol id="i-rover" viewBox="0 0 24 24"><path d="M3 15V9h13l4 6M7 9V5h7m-3 0V2M2 15h20"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="m14 2-9 12h6l-1 8 9-12h-6Z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6Z"/><path d="m8 12 3 3 5-6"/></symbol>
+  <symbol id="i-sound" viewBox="0 0 24 24"><path d="m11 4-6 5H2v6h3l6 5Zm4 4c3 2 3 6 0 8m3-11c5 4 5 10 0 14"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  <symbol id="i-cat" viewBox="0 0 48 48"><path d="M11 23 9 9l12 8h6l12-8-2 14a16 16 0 1 1-26 0Z"/><path d="M17 27h1m12 0h1m-9 6 2 2 2-2m-12 0-7-2m27 2 7-2"/></symbol>
+</defs></svg>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="./" aria-label="Astro Kitty home"><span class="brand-mark"><svg><use href="#i-cat"/></svg></span><span>astro kitty<span class="brand-sub">JUNIOR ASTRONAUT TRAINER</span></span></a>
+    <div class="nav-label">YOUR SPACE</div>
+    <nav aria-label="Main navigation">
+      <button class="nav-item active" id="navTraining"><svg><use href="#i-grid"/></svg>Training ground<span class="nav-dot"></span></button>
+      <button class="nav-item" id="navPassport"><svg><use href="#i-star"/></svg>Mission passport<span id="navCount">0/4</span></button>
+      <button class="nav-item" id="navAvatar"><svg><use href="#i-cat"/></svg>Your astronaut</button>
+      <button class="nav-item" id="navScience"><svg><use href="#i-orbit"/></svg>Science log</button>
+    </nav>
+    <div class="base-card"><div class="planet-mini"></div><div><span class="status-dot"></span> MARS OUTPOST 01</div><strong>A little further<br>from ordinary.</strong><p>One small crew.<br>A whole world to explore.</p><span class="base-coordinates">04.6°S &nbsp; 137.4°E</span></div>
+    <button class="profile" id="profileButton"><span class="avatar-mini" id="avatarMini"></span><span><strong id="profileName">Cadet Kitty</strong><small id="profileRank">Astronaut in training</small></span><span class="profile-edit">↗</span></button>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div class="breadcrumb">Mission control <span>/</span> <strong>Training ground</strong></div><div class="top-actions"><a class="icon-button home-button" href="../" aria-label="Home" title="Home">🏠</a><span class="private-tag"><span class="status-dot"></span> PRIVATE PROTOTYPE</span><button class="icon-button" id="soundButton" aria-label="Turn sound on" aria-pressed="false"><svg><use href="#i-sound"/></svg><span class="sound-off">/</span></button><button class="icon-button" id="helpButton" aria-label="How to play"><svg><use href="#i-info"/></svg></button></div></header>
+    <main>
+      <section class="welcome"><div><div class="eyebrow"><span class="tiny-star">✦</span> THE NEXT GENERATION OF EXPLORERS</div><h1>Your next giant leap<span>.</span></h1><p>Suit up, <span id="welcomeName">Cadet Kitty</span>. Mars isn’t going to explore itself.</p></div><div class="progress-summary"><div class="progress-ring" id="progressRing"><span id="completedNumber">0<span>/4</span></span></div><div><strong id="trainingStatus">Ready for liftoff</strong><span>training missions complete</span></div></div></section>
+      <section class="flight-deck" aria-label="Interactive mission area">
+        <div class="scene-column">
+          <div class="scene-toolbar"><span><span class="status-dot"></span><b id="sceneLabel">OUTPOST OVERVIEW</b></span><span class="scene-location">GALE CRATER, MARS <span>↗</span></span></div>
+          <div class="scene-wrap" id="sceneWrap">
+            <canvas id="gameCanvas" width="960" height="520" tabindex="0" role="img" aria-label="Mars outpost. Start a mission to explore using arrow keys, WASD or on-screen controls.">Your browser needs canvas support to display the game.</canvas>
+            <div class="scene-hud hidden" id="sceneHud"><span id="hudStatus">SYSTEMS ONLINE</span><span id="hudTime">00:00</span><button id="pauseButton" class="pause-button" aria-label="Pause mission"><svg><use href="#i-pause"/></svg></button></div>
+            <div class="overview-caption" id="overviewCaption"><span class="live-tag">YOUR TRAINING BASE</span><h2>Big missions.<br>Small pawprints.</h2><p>Four ways to think like an astronaut.</p></div>
+            <div class="scene-labels" id="sceneLabels"><span class="map-label solar-label">01 / SOLAR ARRAY</span><span class="map-label habitat-label">03 / HABITAT</span><span class="map-label rover-label">02 / SUPPLY ROUTE</span></div>
+            <div class="scene-toast hidden" id="sceneToast" role="status"></div>
+            <div class="scene-overlay hidden" id="sceneOverlay"><div class="overlay-box" id="overlayContent"></div></div>
+          </div>
+          <div class="scene-bottom"><span><svg><use href="#i-orbit"/></svg><span id="sceneFootnote">A tiny outpost. A universe of possibility.</span></span><span class="sim-label">2D MISSION SIMULATOR</span></div>
+          <div class="mobile-controls hidden" id="mobileControls"><div class="dpad"><button data-key="ArrowUp" aria-label="Move up">↑</button><button data-key="ArrowLeft" aria-label="Move left">←</button><button data-key="ArrowDown" aria-label="Move down">↓</button><button data-key="ArrowRight" aria-label="Move right">→</button></div><button class="action-touch" id="actionTouch">Hold to clean</button><span>Tap a destination to move</span></div>
+        </div>
+        <aside class="mission-panel" id="missionPanel"></aside>
+      </section>
+      <section class="training-section" id="trainingSection"><div class="section-heading"><div><span class="eyebrow">LEARN BY DOING</span><h2>Astronaut Training</h2></div><span class="section-note">4 missions · about 8 minutes <svg><use href="#i-arrow"/></svg></span></div><div class="mission-grid" id="missionGrid"></div></section>
+      <a class="outpost-link" href="../outpost.html">Run the outpost →</a><footer><span><span class="tiny-star">✦</span> Built for curious minds. And brave little cats.</span><span>ASTRO KITTY <span class="footer-dot">·</span> INDEPENDENT SPACE APPS PROTOTYPE</span></footer>
+    </main>
+  </div>
+</div>
+<dialog id="infoDialog"><div class="dialog-head"><span class="eyebrow" id="dialogEyebrow">MISSION CONTROL</span><button class="close-button" id="closeDialog" aria-label="Close dialog">×</button></div><div id="dialogContent"></div></dialog>
+<script>/* Module load errors have a readable fallback. */window.addEventListener('error',function(e){if(e.target&&e.target.tagName==='SCRIPT'){document.getElementById('missionPanel').innerHTML='<h2>Connection interrupted</h2><p>Please reload to load your training missions.</p>';}},true);</script>
+</body></html>

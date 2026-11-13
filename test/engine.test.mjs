@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createMission,tick,setDestination,runShift} from '../dist/engine.js';
+const step=(s,seconds,input={})=>{for(let i=0;i<Math.ceil(seconds*60)&&s.phase==='playing';i++)tick(s,1/60,input);};
+const go=(s,x,y)=>{setDestination(s,x,y);for(let i=0;i<1000&&s.phase==='playing'&&s.target;i++)tick(s,1/60,{});};
+test('solar: a player can travel to and clean every panel',()=>{const s=createMission('solar');for(const p of s.panels){setDestination(s,p.x,p.y);s.autoClean=s.panels.indexOf(p);for(let i=0;i<1000&&p.clean<100;i++)tick(s,1/60,{});}assert.equal(s.result.success,true);assert.equal(Math.round(s.energy),100);assert.ok(s.result.score<=1000);});
+test('rover: crates are reachable and can be delivered without rock contact',()=>{const s=createMission('rover');for(const p of [[100,160],[268,145],[350,105],[720,105],[765,140],[793,415],[760,475],[440,475],[115,423]])go(s,...p);assert.equal(s.result?.success,true);assert.equal(s.delivered,true);assert.equal(s.hull,100);});
+test('rover: contact penalizes integrity and still allows escape',()=>{const s=createMission('rover');go(s,365,286);assert.ok(s.hull<100);const x=s.player.x;step(s,.8,{left:true});assert.ok(s.player.x<x-30);assert.equal(s.crates.filter(c=>c.got).length,0);});
+test('power: unavailable power cannot be spent; three valid shifts win',()=>{const s=createMission('power');s.alloc={air:6,crop:6,rover:6};assert.equal(runShift(s),false);assert.equal(s.shift,0);assert.equal(s.air,55);s.alloc={air:3,crop:3,rover:2};runShift(s);s.alloc={air:3,crop:3,rover:0};runShift(s);s.alloc={air:3,crop:0,rover:1};runShift(s);assert.equal(s.result.success,true);assert.equal(s.crop,60);assert.equal(s.air,64);});
+test('power: a stopped processor produces no air or crop benefit',()=>{const s=createMission('power');s.alloc={air:0,crop:0,rover:0};runShift(s);assert.equal(s.air,37);assert.equal(s.crop,0);runShift(s);assert.equal(s.result.success,false);});
+test('shelter: collecting both sensors and returning succeeds',()=>{const s=createMission('shelter');go(s,480,170);go(s,790,365);go(s,145,165);assert.equal(s.result.success,true);assert.equal(s.sheltered,true);});
+test('timeout ends the attempt; replay starts with fresh resources',()=>{let s=createMission('shelter');step(s,41);assert.equal(s.result.success,false);assert.equal(s.time,0);s=createMission('solar');assert.equal(s.elapsed,0);assert.equal(s.energy,20);assert.equal(s.panels.filter(p=>p.clean).length,0);});

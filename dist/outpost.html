@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#15233b"><meta name="description" content="Run a little Mars outpost for five sols with Astro Kitty and Dhrubo.">
+  <title>Astro Kitty · Run the outpost</title><link rel="icon" href="./icon.svg"><link rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./outpost.css">
+  <script type="module" src="./outpost.js"></script>
+</head>
+<body class="outpost-page">
+<main id="outpostGame">
+  <canvas id="outpostCanvas" tabindex="0" role="img"></canvas>
+  <header class="outpost-header"><a href="./" class="brand" data-copy="brand"></a><div class="outpost-status"><span id="solLabel"></span><button id="rockCounter" class="rock-counter"></button></div><div class="outpost-header-actions"><a class="chip-button home-button" href="./" aria-label="Home" title="Home">🏠</a><button id="voiceToggle" class="chip-button"></button><button id="menuToggle" class="chip-button"></button></div></header>
+  <section id="meters" class="outpost-meters"></section>
+  <details class="outpost-info">
+    <summary><span class="info-icon" aria-hidden="true">i</span><span data-copy="outpostInfo"></span></summary>
+    <div class="outpost-info-body">
+      <div class="base-hud"><span id="siteLabel"></span><button id="baseMapButton" class="chip-button"></button></div>
+      <div class="moon-buttons"><button id="phobosButton" class="chip-button" data-copy="phobos"></button><button id="deimosButton" class="chip-button" data-copy="deimos"></button></div>
+      <div id="outpostTouch" class="outpost-touch" role="group" aria-labelledby="outpostMove"><span id="outpostMove" data-copy="storyMove"></span><button data-move="up" aria-label="Move up">↑</button><button data-move="left" aria-label="Move left">←</button><button data-move="down" aria-label="Move down">↓</button><button data-move="right" aria-label="Move right">→</button></div>
+    </div>
+  </details>
+  <div id="worldNote" class="world-note" role="status"></div>
+  <div class="outpost-bottom">
+    <footer class="outpost-dock"><button id="taskButton" class="primary"></button><button id="jokeButton" class="chip-button"></button><button id="photoButton" class="chip-button"></button></footer>
+    <div id="pipCaption" class="pip-caption" aria-live="polite"><strong data-copy="pipName"></strong><span id="pipLine"></span><button id="repeatPip" class="chip-button" aria-label="Repeat Dhrubo">↻</button></div>
+  </div>
+</main>
+<dialog id="missionDialog" class="mission-dialog"><div class="mission-dialog-top"><span id="panelKicker"></span><button id="panelClose" class="chip-button">×</button></div><div id="panelBody"></div></dialog>
+<dialog id="bonusDialog" class="bonus-dialog" aria-labelledby="bonusTitle"><div class="mission-dialog-top"><h2 id="bonusTitle" data-copy="bonus"></h2><button id="bonusClose" class="chip-button">×</button></div><p id="bonusStatus" role="status"></p><div class="bonus-board"><canvas id="bonusCanvas" width="480" height="430" tabindex="0" role="img"></canvas><div id="bonusResult" class="bonus-result hidden" role="status"><span id="bonusResultIcon" aria-hidden="true"></span><strong id="bonusResultMessage"></strong></div></div><p data-copy="bonusHint"></p><button id="bonusAgain" class="primary" data-copy="bonusStart"></button><button id="bonusBack" class="chip-button" data-copy="bonusDone"></button></dialog>
+<noscript><p class="noscript">Please enable JavaScript to play Astro Kitty.</p></noscript>
+</body></html>
