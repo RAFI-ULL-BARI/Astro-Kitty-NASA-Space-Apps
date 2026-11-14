@@ -9,7 +9,7 @@ A playful web game for kids aged 7–12, powered by real NASA space-weather data
 <a href="https://astro-kitty-mission-trainer.vercel.app"><img src="https://img.shields.io/badge/▶%20PLAY%20NOW-astro--kitty--mission--trainer.vercel.app-f7c873?style=for-the-badge&labelColor=14233c" alt="Play Astro Kitty now"></a>
 
 <img src="https://img.shields.io/badge/NASA%20Space%20Apps-2026-1d3a55?style=flat-square" alt="NASA Space Apps 2026">
-<img src="https://img.shields.io/badge/Ages-8–12-8fdcc4?style=flat-square" alt="Ages 7 to 12">
+<img src="https://img.shields.io/badge/Ages-7–12-8fdcc4?style=flat-square" alt="Ages 7 to 12">
 <img src="https://img.shields.io/badge/Made%20in-Bangladesh%20🇧🇩-006a4e?style=flat-square" alt="Made in Bangladesh">
 <img src="https://img.shields.io/badge/Works-offline%20%7C%20phone%20%7C%20laptop-c3a8f5?style=flat-square" alt="Works offline, on phones and laptops">
 
