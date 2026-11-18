@@ -8,6 +8,7 @@ A playful web game for kids aged 7–12, built on real NASA space data.
 
 <a href="https://astro-kitty-mission-trainer.vercel.app"><img src="https://img.shields.io/badge/▶%20PLAY%20NOW-astro--kitty--mission--trainer.vercel.app-f7c873?style=for-the-badge&labelColor=14233c" alt="Play Astro Kitty now"></a>
 
+<a href="https://github.com/RAFI-ULL-BARI/Astro-Kitty-NASA-Space-Apps/actions/workflows/test.yml"><img src="https://github.com/RAFI-ULL-BARI/Astro-Kitty-NASA-Space-Apps/actions/workflows/test.yml/badge.svg" alt="Tests"></a>
 <img src="https://img.shields.io/badge/NASA%20Space%20Apps-2026-1d3a55?style=flat-square" alt="NASA Space Apps 2026">
 <img src="https://img.shields.io/badge/Ages-7–12-8fdcc4?style=flat-square" alt="Ages 7 to 12">
 <img src="https://img.shields.io/badge/Made%20in-Bangladesh%20🇧🇩-006a4e?style=flat-square" alt="Made in Bangladesh">
@@ -146,7 +147,7 @@ python3 -m http.server 8000 --directory dist
 # open http://localhost:8000
 ```
 
-To rebuild the 3D bundle and run the tests (Node.js 20+):
+To compile the TypeScript modules and run the tests (Node.js 20+):
 
 ```bash
 npm ci
@@ -154,10 +155,11 @@ npm test
 ```
 
 ```
-dist/        the finished game (this is what gets hosted)
+dist/        the game itself: hand-written HTML, CSS and JavaScript, served as-is
 dist/world/  the 24-mission Mars Adventure 3D (prebuilt)
-src/         source for the 2D art and the Mars globe
-test/        automated tests
+src/         TypeScript modules that compile into dist/ (flight model, narrator, visuals)
+scripts/     build and voice helper scripts
+test/        automated tests, run on GitHub on every push
 voice/       script and tool for Dhrubo's recorded voice
 docs/        screenshots and notes
 ```

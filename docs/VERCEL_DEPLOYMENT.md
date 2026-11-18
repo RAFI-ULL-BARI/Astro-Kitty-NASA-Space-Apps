@@ -4,11 +4,10 @@ The deployed game is static HTML/CSS/JavaScript, built from JavaScript and selec
 
 ## Import from Git
 
-1. Extract the ZIP and put the contents of the Astro_Kitty folder in your Git repository. Keep vercel.json, package.json, package-lock.json, tsconfig.json, src, scripts and dist together.
-2. Import that repository into Vercel.
-3. Select the folder containing vercel.json as the Root Directory. If you uploaded Astro_Kitty as a nested folder, choose Astro_Kitty. If its contents are at repository root, leave the root at its default.
-4. Use Framework Preset: Other. The included vercel.json installs with npm ci --include=dev, builds with npm run build, and serves dist as the Output Directory.
-5. Deploy. Open the resulting HTTPS address.
+1. Import this GitHub repository into Vercel and keep the Root Directory at the repository root.
+2. Use Framework Preset: **Other**.
+3. Set the Install Command to `npm ci --include=dev`, the Build Command to `npm run build` and the Output Directory to `dist`.
+4. Deploy, then open the resulting HTTPS address.
 
 Do not add a catch-all rewrite to index.html. This game has multiple real HTML pages, including academy.html, outpost.html and teacher.html.
 

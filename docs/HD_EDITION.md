@@ -40,9 +40,9 @@ Run:
     npm run build
     npm test
 
-The build compiles the TypeScript to dist, then normalizes versioned root-level module and stylesheet URLs. Bump the version in scripts/finish-build.mjs and the offline cache name in dist/sw.js for a future release that needs cache invalidation. Source and emitted JavaScript are included so the supplied Python launcher can still run the extracted game immediately.
+The build compiles the TypeScript to dist, then normalizes versioned root-level module and stylesheet URLs. Bump the version in scripts/finish-build.mjs and the offline cache name in dist/sw.js for a future release that needs cache invalidation. Source and emitted JavaScript are both committed, so `dist` can be served immediately without a build.
 
-vercel.json now uses **npm ci --include=dev**, **npm run build** and output directory **dist**. Keep the configuration, package.json, package-lock.json, tsconfig.json, src, scripts and dist together at the selected Vercel project root. No Python runtime or backend service is required on Vercel.
+On Vercel, set the build command to **npm run build** and the output directory to **dist** (see [Vercel deployment](VERCEL_DEPLOYMENT.md)). No Python runtime or backend service is required on Vercel.
 
 See RESEARCH_AND_DESIGN.md for the science sources and model limits.
 

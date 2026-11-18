@@ -8,13 +8,13 @@ Walk/drive with WASD or arrows; drag the view or use J/L to look. Hold Space or 
 
 Terrain, shadows that follow the player, dust, footprints, equipment animations, filtered window views, indoor lighting, and mobile controls are bundled locally. The Real dropdown links to sources and distinguishes compressed game mechanics from real science. The landscape and habitat are fictional; the game is not an accurate map or an engineering simulator.
 
-Build with `npm ci` then `npm run build`. Run `npm test` for unit checks. `test/browser-expedition.mjs` is the end-to-end Chrome playthrough; set `PLAYWRIGHT_MODULE`, `CHROMIUM_EXECUTABLE`, and optionally `PREVIEW_URL` for your installation. Serve `dist` over HTTP/HTTPS. Vercel uses the included `vercel.json`. No deployment has been performed by this update.
+Build with `npm ci` then `npm run build`. Run `npm test` for unit checks. The `test/browser-*.mjs` scripts are optional Chrome playthroughs. Serve `dist` over HTTP/HTTPS. Vercel serves `dist` as the output directory. No deployment has been performed by this update.
 
 ---
 
 # Unified Dhrubo + Mars Explorer update
 
-Run `python3 Start_Astro_Kitty.py` from this folder. Open **Explore Mars in 3D** on the home screen, the adventure chooser, or the Mars Base menu. To serve only the finished site, run `python3 -m http.server 8000 --directory dist`, then open `http://localhost:8000/mars-explorer.html`. Serve over HTTP/HTTPS; opening an HTML file directly will not load modules correctly.
+Run `python3 -m http.server 8000 --directory dist` from the repository root and open `http://localhost:8000`. Open **Explore Mars in 3D** on the home screen, the adventure chooser, or the Mars Base menu. The planet explorer is at `http://localhost:8000/mars-explorer.html`. Serve over HTTP/HTTPS; opening an HTML file directly will not load modules correctly.
 
 - Spin and zoom a real WebGL Mars globe textured with NASA/JPL's Viking map. Mouse/touch drag, pinch, arrow keys and zoom buttons work. Choose **Land here** on the globe and confirm your landing. Walk with WASD, the arrow keys, or the touch controls. Drag or press J / L to look. **Back to orbit** returns to the globe.
 - Tap **Solar storm · 2024** or **Dust storm · 2018** to replay a short visual explanation with the real date and source. The effects are illustrations, not live images or geographic storm forecasts. A solar storm is not a dust storm.
@@ -51,7 +51,7 @@ AI disclosure: this project has used **ChatGPT/Codex and Claude**. This update's
 
 # Mission film update
 
-Use `python3 Start_Astro_Kitty.py` to preview the finished build locally. Fly to Mars, Astronaut Training and Mars Base have skippable illustrated openings. The new film narration and simulator flight clips ship with the game. Earth Academy and the trip's crew challenges have a Skip round button. Mars Base can be reset after confirmation, while collected badges and settings are kept.
+Use `python3 -m http.server 8000 --directory dist` to preview the finished build locally. Fly to Mars, Astronaut Training and Mars Base have skippable illustrated openings. The new film narration and simulator flight clips ship with the game. Earth Academy and the trip's crew challenges have a Skip round button. Mars Base can be reset after confirmation, while collected badges and settings are kept.
 
 # HD Discovery edition
 
@@ -233,14 +233,14 @@ The included dist folder is ready to preview. TypeScript source modules compile 
 
 ```bash
 git clone https://github.com/RAFI-ULL-BARI/Astro-Kitty-NASA-Space-Apps.git
-cd Astro-Kitty-NASA-Space-Apps/dist
-python3 -m http.server 8000
+cd Astro-Kitty-NASA-Space-Apps
+python3 -m http.server 8000 --directory dist
 # open http://localhost:8000
 ```
 
 For source changes, install dependencies with `npm ci`, then run `npm run build`. Run the checks with `npm test`.
 
-Current release notes: [Visual designer and warm worlds](docs/VISUAL_DESIGNER_AND_WARM_WORLDS.md). Vercel settings are included in vercel.json.
+Current release notes: [Visual designer and warm worlds](VISUAL_DESIGNER_AND_WARM_WORLDS.md). Deployment steps are in [Vercel deployment](VERCEL_DEPLOYMENT.md).
 
 ```
 dist/        the game (deploy this folder)

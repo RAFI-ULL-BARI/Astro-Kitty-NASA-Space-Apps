@@ -25,7 +25,7 @@ export function prepareCanvas(canvas, width, height) {
             current.observer.observe(canvas);
         }
     }
-    const ratio = Math.min(2,Math.max(1, globalThis.devicePixelRatio || record.ratio));
+    const ratio = Math.min(2, Math.max(1, globalThis.devicePixelRatio || record.ratio));
     const visibleWidth = canvas.dataset?.fit === 'cover' ? Math.max(record.cssWidth, record.cssHeight * width / height) : record.cssWidth;
     const proposed = Math.max(1, Math.round(visibleWidth * ratio));
     const pixelWidth = Math.min(proposed, Math.round(Math.sqrt(4_200_000 * width / height)));

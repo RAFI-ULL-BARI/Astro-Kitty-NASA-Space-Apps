@@ -18,6 +18,6 @@ This pass did not measure physical-device frame rates or audibly assess every vo
 
 ## Run / deploy
 
-Extract the ZIP and run `python3 Start_Astro_Kitty.py`, or use Start_Mac.command. The included dist is ready to preview. For source changes: `npm ci`, `npm run build`, then `npm test`. Import the folder containing vercel.json into Vercel; it selects dist and the build command. Python is only a local preview server.
+Run `python3 -m http.server 8000 --directory dist` from the repository root and open `http://localhost:8000`. The included dist is ready to preview. For source changes: `npm ci`, `npm run build`, then `npm test`. See [Vercel deployment](VERCEL_DEPLOYMENT.md) for hosting. Python is only a local preview server.
 
 The base picture works locally with no API key. The optional reference CLI under scripts/generate-base-picture.mjs is separate and is never invoked by the browser or the Vercel build.

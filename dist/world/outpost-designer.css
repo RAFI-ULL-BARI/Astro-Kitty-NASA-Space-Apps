@@ -6,6 +6,8 @@
   width: min(1010px, calc(100% - 24px));
   max-width: none;
   height: fit-content;
+  max-height: calc(100vh - 24px);
+  max-height: calc(100svh - 24px);
   padding: 18px 22px;
   margin: auto;
   border: 1px solid var(--workshop-line);
@@ -13,6 +15,14 @@
   color: var(--workshop-ink);
 }
 .mission-dialog[data-kind=design] .mission-dialog-top { min-height: 44px; }
+.mission-dialog.setup-dialog[data-kind=design] #panelBody { flex: 1 1 auto; min-height: 0; }
+.mission-dialog.setup-dialog[data-kind=design] .workshop-content { flex: 1 1 auto; min-height: 0; -webkit-overflow-scrolling: touch; }
+/* iOS Safari collapsed the design dialog to its title bar: with a fit-content
+   height it sized the flex: 1 (0% basis) body as zero. An auto basis plus a
+   definite height on phones keeps the map and buttons visible everywhere. */
+@media (max-width: 670px), (pointer: coarse) and (max-height: 900px) {
+  .mission-dialog.setup-dialog[data-kind=design] { height: calc(100vh - 24px); height: calc(100svh - 24px); }
+}
 .workshop-content { padding: 0 3px 0 0; }
 .workshop-heading { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin: 0 0 14px; }
 .workshop-heading h2 { font-size: clamp(26px, 4vw, 42px); line-height: 1.05; }
